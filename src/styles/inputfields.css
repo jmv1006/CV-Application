@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+#generalContainer {
+    width: 70%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    background-color: #e6e6e6;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+#sectionHeader {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+form {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#inputBox {
+    width: 60%;
+    height: 65%;
+    border-radius: 5px;
+}
