@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import './styles/App.css'
 import Header from "./components/header";
 import GeneralInfo from "./components/general";
-
+import WorkExperience from "./components/work";
+import Education from "./components/education";
+import Result from "./components/result";
 
 class App extends Component {
   constructor(props) {
@@ -14,14 +16,15 @@ class App extends Component {
       phone: '',
     }
 
-    this.handler = this.handler.bind(this)
+    this.updateValue = this.updateValue.bind(this);
   }
 
-  handler = name => {
-    this.setState({
-      name: name
-    })
+
+  updateValue(item, value) {
+    this.setState({[item]: value});
     console.log(this.state.name)
+    console.log(this.state.number)
+    console.log(this.state.email)
   }
 
 
@@ -29,7 +32,10 @@ class App extends Component {
     return (
       <div id="app">
         <Header />
-        <GeneralInfo handler = {this.handler} />
+        <GeneralInfo updateValue = {this.updateValue} />
+        <WorkExperience />
+        <Education />
+        <Result />
       </div>
     );
   }

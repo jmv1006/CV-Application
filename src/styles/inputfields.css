@@ -2,7 +2,7 @@
 
 #generalContainer {
     width: 70%;
-    height: 40%;
+    height: 18rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,27 +10,86 @@
     gap: 1rem;
     background-color: #e6e6e6;
     padding: 1.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
     border-radius: 1rem;
+}
+
+#workExperienceContainer {
+    width: 70%;
+    height: 18rem;
+    background-color: #e6e6e6;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+#educationContainer {
+    width: 70%;
+    height: 18rem;
+    background-color: #e6e6e6;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
 }
 
 #sectionHeader {
     margin: 0;
     font-family: 'Oswald', sans-serif;
 }
-form {
+
+#generalForm {
     width: 100%;
-    height: 20%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
+#workForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 
+#educationForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#workInputBox {
+    width: 60%;
+    height: 60%;
+    border-radius: 5px;
+}
 
 #inputBox {
     width: 60%;
-    height: 65%;
+    height: 60%;
+    border-radius: 5px;
+}
+
+#educationInputBox {
+    width: 60%;
+    height: 20%;
     border-radius: 5px;
 }
