@@ -16,6 +16,15 @@ class Result extends Component {
                         <div id='phone'>{this.props.number}</div>
                     </div>
                 </div>
+                <div id='workContainer'>
+                    <div id='workExHeader'>Experience</div>
+                    <div id='workWrapper'>
+                        <div id='jobTitle'>{this.props.jobtitle}</div>
+                        <div id='companyName'>{this.props.company}</div>
+                        <div id='yearsWorked'>{this.props.years}</div>
+                        <div id='description'>{this.props.description}</div>
+                    </div>
+                </div>
 
             </div>
         )

@@ -14,6 +14,10 @@ class App extends Component {
       name: '',
       email: '',
       phone: '',
+      jobtitle: '',
+      company: '',
+      years: '',
+      description: ''
     }
 
     this.updateValue = this.updateValue.bind(this);
@@ -30,9 +34,9 @@ class App extends Component {
       <div id="app">
         <Header />
         <GeneralInfo updateValue = {this.updateValue} />
-        <WorkExperience />
+        <WorkExperience updateValue = {this.updateValue}/>
         <Education />
-        <Result name={this.state.name} email={this.state.email} number={this.state.phone}/>
+        <Result name={this.state.name} email={this.state.email} number={this.state.phone} jobtitle={this.state.jobtitle} company={this.state.company} years={this.state.years} description={this.state.description}/>
       </div>
     );
   }

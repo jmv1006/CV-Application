@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 #resultContainer {
+    font-family: 'Roboto', sans-serif;
     width: 40rem;
-    height: 50rem;
+    height: 52rem;
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
 }
 
 #headerContainer {
@@ -19,7 +25,6 @@
 
 #name {
     color: white;
-    font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
 }
 
@@ -40,4 +45,40 @@
 #phone {
     color: white;
     font-family: 'Roboto', sans-serif;
+}
+
+#workContainer {
+     width: 80%;
+     height: 12rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     gap: .25rem;
+}
+
+#workExHeader {
+    font-size: 1.65rem;
+    font-weight: bold;
+    text-decoration: underline;
+    color: gray;
+}
+
+#workWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+}
+
+#jobTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#companyName {
+    font-style: italic;
+}
+
+#yearsWorked {
+    font-style: italic;
 }
