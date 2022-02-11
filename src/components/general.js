@@ -19,7 +19,7 @@ class GeneralInfo extends Component {
                 <form id='generalForm'>
                     <input type="text" placeholder="Name" name="name" id='inputBox' value={this.props.name} onChange={(e) => this.updateValue('name', e.target.value)} />
                     <input type="email" placeholder="Email" name="email" id='inputBox' value={this.props.email} onChange={(e) => this.updateValue('email', e.target.value)} />
-                    <input type="tel" placeholder='Phone Number' name="phoneNumber" id='inputBox' onChange={(e) => this.updateValue('number', e.target.value)}/>
+                    <input type="tel" placeholder='Phone Number' name="phoneNumber" id='inputBox' onChange={(e) => this.updateValue('phone', e.target.value)}/>
                 </form>
             </div>
         )

@@ -1,5 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 #resultContainer {
-    width: 80%;
-    height: 48rem;
-    border: 2px solid red;
+    width: 40rem;
+    height: 50rem;
+    border: 2px solid black;
+}
+
+#headerContainer {
+    width: 100%;
+    height: 15%;
+    background-color: #121229;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+}
+
+#name {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+#emailPhoneCont {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+}
+
+#email {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#phone {
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }

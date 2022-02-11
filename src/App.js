@@ -22,9 +22,6 @@ class App extends Component {
 
   updateValue(item, value) {
     this.setState({[item]: value});
-    console.log(this.state.name)
-    console.log(this.state.number)
-    console.log(this.state.email)
   }
 
 
@@ -35,7 +32,7 @@ class App extends Component {
         <GeneralInfo updateValue = {this.updateValue} />
         <WorkExperience />
         <Education />
-        <Result />
+        <Result name={this.state.name} email={this.state.email} number={this.state.phone}/>
       </div>
     );
   }
