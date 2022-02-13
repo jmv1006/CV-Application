@@ -8,7 +8,6 @@ class mainContent extends Component {
         super(props);
         
         this.state = {
-            counter: 0,
             userInfo: {name: '', email: '', phone: ''}
         }
 
@@ -24,7 +23,7 @@ class mainContent extends Component {
     render() {
         return (
             <div id='mainContent'>
-                <CvResult number={this.state.userInfo.phone}/>
+                <CvResult name = {this.state.userInfo.name} number={this.state.userInfo.phone} email={this.state.userInfo.email}/>
                 <UserInput onGeneralInfoSendUp={this.sendGeneralInfoToChild}/>
             </div>
         )
