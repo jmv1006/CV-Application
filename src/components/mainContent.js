@@ -8,10 +8,12 @@ class mainContent extends Component {
         super(props);
         
         this.state = {
-            userInfo: {name: '', email: '', phone: ''}
+            userInfo: {name: '', email: '', phone: ''},
+            jobs: []
         }
 
         this.sendGeneralInfoToChild = this.sendGeneralInfoToChild.bind(this)
+        this.addJobToArr = this.addJobToArr.bind(this)
     }
     
     sendGeneralInfoToChild(name, email, phone) {
@@ -20,11 +22,17 @@ class mainContent extends Component {
         })
     }
 
+    addJobToArr(job) {
+        this.setState({
+            jobs: this.state.jobs.concat(job)
+        })
+    }
+
     render() {
         return (
             <div id='mainContent'>
                 <CvResult name = {this.state.userInfo.name} number={this.state.userInfo.phone} email={this.state.userInfo.email}/>
-                <UserInput onGeneralInfoSendUp={this.sendGeneralInfoToChild}/>
+                <UserInput onGeneralInfoSendUp={this.sendGeneralInfoToChild} sendJobUp={this.addJobToArr}/>
             </div>
         )
     }

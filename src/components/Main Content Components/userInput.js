@@ -7,17 +7,27 @@ class UserInput extends Component {
         super(props);
 
         this.sendGeneralInfoUp = this.sendGeneralInfoUp.bind(this)
+        this.addJobToArr = this.addJobToArr.bind(this)
+        this.jobInfoAdd = this.jobInfoAdd.bind(this)
     }
 
     sendGeneralInfoUp(name, email, number) {
         this.props.onGeneralInfoSendUp(name, email, number)
     }
 
+    addJobToArr(job) {
+        this.props.sendJobUp(job)
+    }
+
+    jobInfoAdd(job) {
+        console.log(job)
+    }
+
     render() {
         return(
             <div id='inputContainer'>
                 <GeneralInfo onClick={this.sendGeneralInfoUp} />
-                <WorkExperienceContainer />
+                <WorkExperienceContainer onJobInfoSubmit={this.jobInfoAdd} onAddJob={this.addJobToArr}/>
             </div>
         )
     }
