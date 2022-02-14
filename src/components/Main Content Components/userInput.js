@@ -20,7 +20,8 @@ class UserInput extends Component {
     }
 
     jobInfoAdd(job) {
-        console.log(job)
+        //send up edited job to parent
+        this.props.getJobInfoInput(job);
     }
 
     render() {

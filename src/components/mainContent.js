@@ -14,6 +14,7 @@ class mainContent extends Component {
 
         this.sendGeneralInfoToChild = this.sendGeneralInfoToChild.bind(this)
         this.addJobToArr = this.addJobToArr.bind(this)
+        this.getJobInformationFromChild = this.getJobInformationFromChild.bind(this)
     }
     
     sendGeneralInfoToChild(name, email, phone) {
@@ -28,11 +29,23 @@ class mainContent extends Component {
         })
     }
 
+    //gets job info from user input
+    getJobInformationFromChild(job) {
+        for(let i = 0; i < this.state.jobs; i++) {
+            if(this.state.jobs[i].number === job.number) {
+                this.state.jobs[i].title = job.title;
+                this.state.jobs[i].company = job.company;
+                this.state.jobs[i].years = job.years;
+            }
+        }
+        console.log(this.state.jobs)
+    }
+
     render() {
         return (
             <div id='mainContent'>
                 <CvResult name = {this.state.userInfo.name} number={this.state.userInfo.phone} email={this.state.userInfo.email}/>
-                <UserInput onGeneralInfoSendUp={this.sendGeneralInfoToChild} sendJobUp={this.addJobToArr}/>
+                <UserInput getJobInfoInput={this.getJobInformationFromChild} onGeneralInfoSendUp={this.sendGeneralInfoToChild} sendJobUp={this.addJobToArr}/>
             </div>
         )
     }

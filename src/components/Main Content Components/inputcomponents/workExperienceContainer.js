@@ -13,6 +13,7 @@ class WorkExperienceContainer extends Component {
 
         this.addNewJobInput = this.addNewJobInput.bind(this)
         this.saveJobInfoToState = this.saveJobInfoToState.bind(this)
+        this.deleteJob = this.deleteJob.bind(this)
     }
 
  
@@ -37,10 +38,23 @@ class WorkExperienceContainer extends Component {
         }
     }
 
+    deleteJob(identifier) {
+        for(let i = 0; i < this.state.jobInputs.length; i++) {
+            
+            if(this.state.jobInputs[i].number === identifier) {
+               const reducedArr = this.state.jobInputs;
+               reducedArr.splice(i, 1);
+               this.setState({
+                   jobInputs: reducedArr,
+               })
+            }
+        }
+        console.log(this.state.jobInputs)
+    }
 
     render() {
         const jobInputs = this.state.jobInputs.map((job, index) =>
-            <JobInput sendUpJobInfo={this.saveJobInfoToState} key={this.state.jobInputs[index].number} identifier={this.state.jobInputs[index].number} />
+            <JobInput getDeletionNotification={this.deleteJob} sendUpJobInfo={this.saveJobInfoToState} key={this.state.jobInputs[index].number} identifier={this.state.jobInputs[index].number} />
         );
 
         return(
