@@ -38,21 +38,37 @@ class mainContent extends Component {
     
     //gets job info from user input
     getJobInformationFromChild(job) {
-        for(let i = 0; i < this.state.jobs; i++) {
+        for(let i = 0; i < this.state.jobs.length; i++) {
             if(this.state.jobs[i].number === job.number) {
-                this.state.jobs[i].title = job.title;
-                this.state.jobs[i].company = job.company;
-                this.state.jobs[i].years = job.years;
-            }
-        }
-    }
+                let jobs = this.state.jobs;
+                let item = this.state.jobs[i];
+                item.title = job.title;
+                item.company = job.company;
+                item.years = job.years;
+                jobs[i] = item;
+
+                this.setState({
+                    jobs: jobs
+                }, () => {
+                    this.setState({
+                        jobsArr: this.state.jobs
+                    })
+                })
+            };
+        };
+        
+    };
 
     deleteAJob(arr) {
         const reducedArr = arr;
         this.setState({
             jobs: reducedArr,
+        }, () => {
+            this.setState({
+                jobsArr: this.state.jobs
+            })
         })
-    }
+    };
 
    
 

@@ -1,6 +1,6 @@
 #generatedCV {
     width: 30rem;
-    height: 40rem;
+    height: 42rem;
     border: 2px solid red;
     display: flex;
     flex-direction: column;
@@ -21,4 +21,31 @@
 
 #resumeName {
     font-size: 1.5rem;
+}
+
+#experienceLabel {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#jobsContainer {
+    width: 100%;
+    height: 65%;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+#jobTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#companyName {
+    font-size: .8rem;
+}
+
+#years {
+    font-size: .8rem;
 }

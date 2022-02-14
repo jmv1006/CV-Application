@@ -9,7 +9,11 @@ class JobDisplay extends Component {
     
     render() {
        return(
-           <div>Job!</div>
+           <div className="jobDisplay">
+               <div id='jobTitle'>{this.props.title}</div>
+               <div id='companyName'>{this.props.company}</div>
+               <div id='years'>{this.props.years}</div>
+           </div>
        )
         
     }
