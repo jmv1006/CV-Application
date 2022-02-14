@@ -21,11 +21,12 @@ class WorkExperienceContainer extends Component {
         this.setState({
             jobNumber: this.state.jobNumber + 1,
             jobInputs: this.state.jobInputs.concat({title: '', company: '', years: '', number: this.state.jobNumber})
-        })
-        const jobInputs = this.state.jobInputs.map((job) =>
+        }, () => {
+            const jobInputs = this.state.jobInputs.map((job) =>
              this.props.onAddJob(job)
-        );
-    }
+            );
+        })
+    };
 
     saveJobInfoToState(title, company, years, identifier) {
         for(let i = 0; i < this.state.jobInputs.length; i++) {
@@ -40,16 +41,15 @@ class WorkExperienceContainer extends Component {
 
     deleteJob(identifier) {
         for(let i = 0; i < this.state.jobInputs.length; i++) {
-            
             if(this.state.jobInputs[i].number === identifier) {
                const reducedArr = this.state.jobInputs;
                reducedArr.splice(i, 1);
                this.setState({
                    jobInputs: reducedArr,
                })
+               this.props.getDeletedJob(this.state.jobInputs)
             }
         }
-        console.log(this.state.jobInputs)
     }
 
     render() {

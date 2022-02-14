@@ -10,7 +10,7 @@ class CvResult extends Component {
         const { name, email, number } = this.props;
         return(
             <div id='cvContainer'>
-                <GeneratedCV name={name} email={email} number = {number}/>
+                <GeneratedCV jobs={this.props.jobsArray} name={name} email={email} number = {number}/>
             </div>
         )
     }

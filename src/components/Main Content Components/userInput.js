@@ -9,6 +9,7 @@ class UserInput extends Component {
         this.sendGeneralInfoUp = this.sendGeneralInfoUp.bind(this)
         this.addJobToArr = this.addJobToArr.bind(this)
         this.jobInfoAdd = this.jobInfoAdd.bind(this)
+        this.sendUpDeletedJob = this.sendUpDeletedJob.bind(this)
     }
 
     sendGeneralInfoUp(name, email, number) {
@@ -24,11 +25,16 @@ class UserInput extends Component {
         this.props.getJobInfoInput(job);
     }
 
+    sendUpDeletedJob(arr) {
+        this.props.reflectDeletedJob(arr)
+    }
+
+
     render() {
         return(
             <div id='inputContainer'>
                 <GeneralInfo onClick={this.sendGeneralInfoUp} />
-                <WorkExperienceContainer onJobInfoSubmit={this.jobInfoAdd} onAddJob={this.addJobToArr}/>
+                <WorkExperienceContainer getDeletedJob={this.sendUpDeletedJob} onJobInfoSubmit={this.jobInfoAdd} onAddJob={this.addJobToArr}/>
             </div>
         )
     }
