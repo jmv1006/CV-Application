@@ -4,7 +4,9 @@
     justify-content: center;
     align-items: center;
     font-size: .75rem;
-    border: 2px solid red;
+    width: 80%;
+    height: auto;
+    border-radius: 1rem;
 }
 
 .formClass {
@@ -13,23 +15,25 @@
 }
 
 #workExperienceContainer {
-    width: 100%;
+    width: 80%;
     height: auto;
     font-size: .75rem;
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
+    gap: .5rem;
 }
 
 #educationInputContainer {
-    width: 100%;
+    width: 80%;
     height: auto;
     font-size: .75rem;
-    border: 2px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
+    gap: .5rem;
 }

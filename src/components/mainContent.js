@@ -126,7 +126,7 @@ class mainContent extends Component {
     render() {
         return (
             <div id='mainContent'>
-                <CvResult jobsArray = {this.state.jobsArr} name={this.state.userInfo.name} number={this.state.userInfo.phone} email={this.state.userInfo.email}/>
+                <CvResult educationsArray = {this.state.educationsArr} jobsArray = {this.state.jobsArr} name={this.state.userInfo.name} number={this.state.userInfo.phone} email={this.state.userInfo.email}/>
                 <UserInput  reflectDeletedEdu={this.deleteAEdu} reflectDeletedJob={this.deleteAJob} getJobInfoInput={this.getJobInformationFromChild} onGeneralInfoSendUp={this.sendGeneralInfoToChild} sendJobUp={this.addJobToArr} sendEduUp={this.addEduToArr} getEduInfoInput={this.getEduInformationFromChild}/>
             </div>
         )

@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
 #generatedCV {
     width: 30rem;
     height: 42rem;
-    border: 2px solid red;
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
+    font-family: 'Source Sans Pro';
 }
 
 #cvHeaderContainer {
@@ -16,7 +20,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    border: 2px solid orange;
 }
 
 #resumeName {
@@ -28,28 +31,64 @@
     margin: 0;
 }
 
+.jobDisplay {
+    background-color: #ededeb;
+    padding: .2rem;
+    border-radius: .5rem;
+}
+
+.eduDisplay {
+    background-color: #ededeb;
+    padding: .2rem;
+    border-radius: .5rem;
+}
+
 #jobsContainer {
     width: 100%;
-    height: 65%;
-    border: 2px solid blue;
+    height: 55%;
     display: flex;
     flex-direction: column;
-    gap: .35rem;
+    gap: .25rem;
 }
 
 #jobTitle {
-    font-size: 1.1rem;
+    font-size: .95rem;
     font-weight: bold;
 }
 
 #companyName {
     font-size: .8rem;
+    font-style: italic;
 }
 
 #years {
     font-size: .8rem;
+    font-style: italic;
 }
 
 #desc {
     font-size: .8rem;
+}
+
+#eduContainer {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+#eduSchool {
+    font-size: .95rem;
+    font-weight: bold;
+}
+
+#eduMajor {
+    font-size: .8rem;
+    font-style: italic;
+}
+
+#eduGradYear {
+    font-size: .8rem;
+    font-style: italic;
 }

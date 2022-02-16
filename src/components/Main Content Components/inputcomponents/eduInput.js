@@ -32,7 +32,7 @@ class EduInput extends Component {
     render() {
         return(
             <div className='inputBoxContainer'>
-                <form className='formClass'>
+                <form onSubmit={this.sendUpEduInfo} className='formClass'>
                     <input type="text" name="school" onChange={this.handleChange} value = {this.state.school} placeholder={'School'} ></input>
                     <input type="text" name="major" onChange={this.handleChange} value = {this.state.major} placeholder={'Major/Area of Study'}></input>
                     <input type="text" name="gradYear" onChange={this.handleChange} value = {this.state.gradYear} placeholder={'Graduation Year'}></input>
