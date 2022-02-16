@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import reactDom from "react-dom";
 import './cvModule.css'
 
 class CVHeader extends Component {
@@ -11,7 +12,10 @@ class CVHeader extends Component {
         return(
           <div id="cvHeaderContainer">
               <div id='resumeName'>{name}</div>
-              <div id='generalInfo'>{number} | {email}</div>
+              <div id='generalInfo'>
+                  <div class='headerGeneralInfo'><span class='headerContactLabel'>email: </span>{email}</div>
+                  <div class='headerGeneralInfo'><span class='headerContactLabel'>phone: </span>{number}</div>
+              </div>
           </div>
         )
     }

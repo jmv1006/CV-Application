@@ -5,7 +5,7 @@ class Footer extends Component {
 
     render() {
         return(
-            <div id='footer'>Jonathan Andrade Valenzuela</div>
+            <div id='footer'>2022 Jonathan Andrade Valenzuela</div>
         )
     }
 }
