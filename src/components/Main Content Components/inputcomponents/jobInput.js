@@ -8,7 +8,8 @@ class JobInput extends Component {
         this.state = {
             title: '',
             company: '',
-            years: ''
+            years: '',
+            desc: ''
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -23,7 +24,7 @@ class JobInput extends Component {
 
     sendUpJobInfo(e) {
         e.preventDefault();
-        this.props.sendUpJobInfo(this.state.title, this.state.company, this.state.years, this.props.identifier)
+        this.props.sendUpJobInfo(this.state.title, this.state.company, this.state.years, this.state.desc, this.props.identifier)
     }
 
     notifyParentOfDeletion(e) {
@@ -38,6 +39,7 @@ class JobInput extends Component {
                     <input type="text" name="title" onChange={this.handleChange} value = {this.state.title} placeholder={'Job Title'} ></input>
                     <input type="text" name="company" onChange={this.handleChange} value = {this.state.company} placeholder={'Company'}></input>
                     <input type="text" name="years" onChange={this.handleChange} value = {this.state.years} placeholder={'Years'}></input>
+                    <input type="text" name="desc" onChange={this.handleChange} value = {this.state.desc} placeholder={'Description'}></input>
                     <button onClick={this.notifyParentOfDeletion}>Delete Job</button>
                     <button type="submit">Submit</button>
                 </form>

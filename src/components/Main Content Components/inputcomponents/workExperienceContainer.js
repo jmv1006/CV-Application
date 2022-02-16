@@ -20,7 +20,7 @@ class WorkExperienceContainer extends Component {
     addNewJobInput() {
         this.setState({
             jobNumber: this.state.jobNumber + 1,
-            jobInputs: this.state.jobInputs.concat({title: '', company: '', years: '', number: this.state.jobNumber})
+            jobInputs: this.state.jobInputs.concat({title: '', company: '', years: '', desc: '', number: this.state.jobNumber})
         }, () => {
             const jobInputs = this.state.jobInputs.map((job) =>
              this.props.onAddJob(job)
@@ -28,12 +28,13 @@ class WorkExperienceContainer extends Component {
         })
     };
 
-    saveJobInfoToState(title, company, years, identifier) {
+    saveJobInfoToState(title, company, years, desc, identifier) {
         for(let i = 0; i < this.state.jobInputs.length; i++) {
             if(this.state.jobInputs[i].number === identifier) {
                 this.state.jobInputs[i].title = title;
                 this.state.jobInputs[i].company = company;
                 this.state.jobInputs[i].years = years;
+                this.state.jobInputs[i].desc = desc;
                 this.props.onJobInfoSubmit(this.state.jobInputs[i])
             }
         }

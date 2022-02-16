@@ -24,7 +24,7 @@
 }
 
 #experienceLabel {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
 }
 
@@ -47,5 +47,9 @@
 }
 
 #years {
+    font-size: .8rem;
+}
+
+#desc {
     font-size: .8rem;
 }

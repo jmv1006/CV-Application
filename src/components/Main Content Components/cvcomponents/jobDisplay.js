@@ -13,6 +13,7 @@ class JobDisplay extends Component {
                <div id='jobTitle'>{this.props.title}</div>
                <div id='companyName'>{this.props.company}</div>
                <div id='years'>{this.props.years}</div>
+               <div id='desc'>{this.props.desc}</div>
            </div>
        )
         

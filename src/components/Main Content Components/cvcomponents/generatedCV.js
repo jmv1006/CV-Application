@@ -11,7 +11,7 @@ class GeneratedCV extends Component {
     
     render() {
         const jobs = this.props.jobs.map((job) => 
-            <JobDisplay title={job.title} company={job.company} years={job.years} key={job.number}/>
+            <JobDisplay title={job.title} company={job.company} years={job.years} desc={job.desc} key={job.number}/>
         )
 
         const { name, email, number } = this.props;

@@ -10,14 +10,19 @@ class mainContent extends Component {
         this.state = {
             userInfo: {name: '', email: '', phone: ''},
             jobs: [],
-            counter: 0,
-            jobsArr: []
+            jobsArr: [],
+            educations: [],
+            educationsArr: []
         }
 
         this.sendGeneralInfoToChild = this.sendGeneralInfoToChild.bind(this)
         this.addJobToArr = this.addJobToArr.bind(this)
         this.getJobInformationFromChild = this.getJobInformationFromChild.bind(this)
         this.deleteAJob = this.deleteAJob.bind(this)
+
+        this.addEduToArr = this.addEduToArr.bind(this)
+        this.getEduInformationFromChild = this.getEduInformationFromChild.bind(this)
+        this.deleteAEdu = this.deleteAEdu.bind(this)
     }
     
     sendGeneralInfoToChild(name, email, phone) {
@@ -45,6 +50,7 @@ class mainContent extends Component {
                 item.title = job.title;
                 item.company = job.company;
                 item.years = job.years;
+                item.desc = job.desc;
                 jobs[i] = item;
 
                 this.setState({
@@ -56,7 +62,7 @@ class mainContent extends Component {
                 })
             };
         };
-        
+
     };
 
     deleteAJob(arr) {
@@ -70,13 +76,58 @@ class mainContent extends Component {
         })
     };
 
+    ///////////////////////////////////////
+
+    addEduToArr(edu) {
+        this.setState({
+            educations: this.state.educations.concat(edu),
+        }, () => {
+            this.setState({
+                educationsArr: this.state.educations
+            })
+        })
+    }
+
+    getEduInformationFromChild(edu) {
+        for(let i = 0; i < this.state.educations.length; i++) {
+            if(this.state.educations[i].number === edu.number) {
+                let edus = this.state.educations;
+                let item = this.state.educations[i];
+                item.school = edu.school;
+                item.major = edu.major;
+                item.gradYear = edu.gradYear;
+                edus[i] = item;
+
+                this.setState({
+                    educations: edus
+                }, () => {
+                    this.setState({
+                        educationsArr: this.state.educations
+                    })
+                })
+            };
+        };
+
+    };
+
+    deleteAEdu(arr) {
+        const reducedArr = arr;
+        this.setState({
+            educations: reducedArr,
+        }, () => {
+            this.setState({
+                educationsArr: this.state.educations
+            })
+        })
+    };
+
    
 
     render() {
         return (
             <div id='mainContent'>
                 <CvResult jobsArray = {this.state.jobsArr} name={this.state.userInfo.name} number={this.state.userInfo.phone} email={this.state.userInfo.email}/>
-                <UserInput reflectDeletedJob={this.deleteAJob} getJobInfoInput={this.getJobInformationFromChild} onGeneralInfoSendUp={this.sendGeneralInfoToChild} sendJobUp={this.addJobToArr}/>
+                <UserInput  reflectDeletedEdu={this.deleteAEdu} reflectDeletedJob={this.deleteAJob} getJobInfoInput={this.getJobInformationFromChild} onGeneralInfoSendUp={this.sendGeneralInfoToChild} sendJobUp={this.addJobToArr} sendEduUp={this.addEduToArr} getEduInfoInput={this.getEduInformationFromChild}/>
             </div>
         )
     }
