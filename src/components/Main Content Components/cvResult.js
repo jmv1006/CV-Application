@@ -1,19 +1,12 @@
-import React, { Component } from "react";
-import GeneratedCV from "./cvcomponents/generatedCV";
+import React, { useState } from "react";
 
-class CvResult extends Component {
-    constructor(props) {
-        super(props);
-    }
 
-    render() {
-        const { name, email, number } = this.props;
-        return(
-            <div id='cvContainer'>
-                <GeneratedCV educations = {this.props.educationsArray} jobs={this.props.jobsArray} name={name} email={email} number = {number}/>
-            </div>
-        )
-    }
+const CvResult = (props) => {
+    return(
+        <div id='cvContainer'>
+            Result
+        </div>
+    )
 }
 
 export default CvResult;
