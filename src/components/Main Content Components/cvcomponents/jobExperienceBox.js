@@ -3,11 +3,11 @@ import './cvModule.css'
 
 const JobExperienceBox = (props) => {
     return(
-        <div id="cvJobBox">
-            <div id='jobTitle'>{props.title}</div>
-            <div id='jobCompany'>{props.company}</div>
-            <div id='jobDates'>{props.startDate} -- {props.endDate}</div>
-            <div id='jobDesc'>{props.desc}</div>
+        <div className="cvBox">
+            <div className="jobAndSchoolName">{props.title}</div>
+            <div className="subText">{props.company}</div>
+            <div className="subText">{props.startDate} -- {props.endDate}</div>
+            <div className="subText">{props.desc}</div>
         </div>
     );
 };

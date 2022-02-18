@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './cvModule.css'
 
-const CvExperience = ({children}) => {
+const CvEducation = ({children}) => {
     return(
         <div className="cvContainer">
             {children}
@@ -9,4 +9,4 @@ const CvExperience = ({children}) => {
     );
 };
 
-export default CvExperience;
+export default CvEducation;

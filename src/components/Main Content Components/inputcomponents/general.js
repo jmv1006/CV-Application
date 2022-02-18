@@ -6,7 +6,7 @@ const GeneralInformationInput = (props) => {
 
 
     return(
-        <div id='generalInfoContainer'>
+        <div className="inputContainer">
             <div className='inputHeader'>General Info</div>
             <form className='formClass'>
                 <input value={props.personName} onChange={props.handleChangeGeneral} name='personName' type='text' placeholder="Name"></input>

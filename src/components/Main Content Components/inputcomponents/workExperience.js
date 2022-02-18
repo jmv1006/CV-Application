@@ -25,17 +25,13 @@ const WorkExperienceInput = (props) => {
         props.deleteJob(job.number)
     };
 
-    const submit = (e) => {
-        e.preventDefault();
-    }
-
     useEffect(() => {
         props.updateJobValues(job)
     }, [job])
 
 
     return(
-        <div id='workExperienceContainer'>
+        <div className="inputFormContainer">
             <form className='formClass'>
                 <input value={job.title} onChange={handleChangeJobs} id={props.number} name='title' type='text' placeholder="Job Title"></input>
                 <input value={job.company} onChange={handleChangeJobs} id={props.number} name='company' type='text' placeholder="Company"></input>
@@ -44,8 +40,7 @@ const WorkExperienceInput = (props) => {
                 <label htmlFor="endDate">End date:</label>
                 <input value={job.endDate} onChange={handleChangeJobs} id={props.number} type='date' name='endDate'></input>
                 <input value={job.desc} onChange={handleChangeJobs} id={props.number} name='desc' type='text' placeholder="Description"></input>
-                <button onClick={deleteJob}>Delete Stuff</button>
-                <button onClick={submit}>Submit</button>
+                <button onClick={deleteJob}>Delete</button>
             </form>
         </div>
     )
