@@ -25,6 +25,10 @@ const WorkExperienceInput = (props) => {
         props.deleteJob(job.number)
     };
 
+    const submit = (e) => {
+        e.preventDefault();
+    }
+
     useEffect(() => {
         props.updateJobValues(job)
     }, [job])
@@ -41,6 +45,7 @@ const WorkExperienceInput = (props) => {
                 <input value={job.endDate} onChange={handleChangeJobs} id={props.number} type='date' name='endDate'></input>
                 <input value={job.desc} onChange={handleChangeJobs} id={props.number} name='desc' type='text' placeholder="Description"></input>
                 <button onClick={deleteJob}>Delete Stuff</button>
+                <button onClick={submit}>Submit</button>
             </form>
         </div>
     )
