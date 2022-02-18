@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import './cvcomponents/cvModule.css'
 
 
-const CvResult = (props) => {
+const CvResult = ({children}) => {
     return(
         <div id='cvContainer'>
-            Result
+            <div id='generatedCV'>
+                {children}
+            </div>
         </div>
     )
 }

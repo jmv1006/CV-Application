@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import './inputcomponents/inputmodule.css'
 
-const UserInput = (props) => {
+const UserInput = ({children}) => {
     return(
         <div id='inputContainer'>
-            Input
+             {children}
         </div>
     )
 }
